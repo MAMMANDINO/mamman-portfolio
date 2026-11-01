@@ -1,11 +1,29 @@
+HTML
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mamman Umar Dino | E-commerce & Operations Analyst</title>
-    <!-- Tailwind CSS CDN -->
+
+    <title>Mamman Umar Dino | AI-Powered E-commerce & Operations Analyst</title>
+
+    <meta name="description" content="I help Shopify and e-commerce brands identify returns, delivery delays, inventory problems and operational inefficiencies using Excel, SQL, Power BI and AI-assisted analytics.">
+
+    <meta name="keywords" content="E-commerce Analyst, AI-Powered Analytics, Shopify Analytics, Operations Analyst, Power BI, SQL, Excel, Inventory Analytics, Returns Analysis">
+
+    <meta name="author" content="Mamman Umar Dino">
+    <meta name="theme-color" content="#0b0f19">
+
+    <meta property="og:title" content="Mamman Umar Dino | E-commerce & Operations Analytics">
+    <meta property="og:description" content="Turning operational data into profit-saving business decisions through data analytics and AI-assisted insights.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -22,484 +40,1004 @@
             }
         }
     </script>
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
+        :root {
+            color-scheme: dark;
+            scroll-padding-top: 90px;
+        }
+
         body {
             background-color: #0b0f19;
             color: #f8fafc;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+            'Segoe UI', Roboto, sans-serif;
         }
+
         .glass-card {
-            background: rgba(19, 28, 46, 0.7);
+            background: rgba(19, 28, 46, 0.75);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(30, 41, 59, 0.85);
         }
+
         .dashboard-img {
             transition: transform 0.3s ease;
         }
+
         .dashboard-img:hover {
             transform: scale(1.01);
         }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .section-heading {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 800;
+            color: white;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        .service-card {
+            transition: border-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .service-card:hover {
+            border-color: rgba(56, 189, 248, 0.55);
+            transform: translateY(-4px);
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid #38bdf8;
+            outline-offset: 4px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
     </style>
 </head>
-<body class="bg-darkbg text-slate-100 antialiased selection:bg-sky-500 selection:text-white">
 
-    <!-- HEADER & NAVIGATION -->
-    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-bordercolor">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-sky-400 inline-block"></span>
-                Mamman Umar Dino
+<body class="bg-darkbg text-slate-100 antialiased">
+
+<a href="#main-content"
+   class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-sky-500 focus:text-black focus:p-3">
+    Skip to content
+</a>
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-bordercolor">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+        <a href="#home" class="text-lg sm:text-xl font-bold tracking-tight text-white flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-sky-400"></span>
+            Mamman Umar Dino
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300"
+             aria-label="Main navigation">
+
+            <a href="#problems" class="hover:text-sky-400">What I Solve</a>
+            <a href="#services" class="hover:text-sky-400">Services</a>
+            <a href="#skills" class="hover:text-sky-400">Skills</a>
+            <a href="#projects" class="hover:text-sky-400">Case Studies</a>
+            <a href="#ai-demo" class="hover:text-sky-400">AI Workflow</a>
+            <a href="#about" class="hover:text-sky-400">About</a>
+
+            <a href="#contact"
+               class="px-4 py-2 rounded-lg bg-sky-500 text-slate-950 font-bold hover:bg-sky-400">
+                Let's Talk
             </a>
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-                <a href="#problems" class="hover:text-sky-400 transition-colors">What I Help Solve</a>
-                <a href="#projects" class="hover:text-sky-400 transition-colors">Case Studies</a>
-                <a href="#process" class="hover:text-sky-400 transition-colors">How I Work</a>
-                <a href="#about" class="hover:text-sky-400 transition-colors">About</a>
-                <a href="#contact" class="px-4 py-2 rounded-lg bg-sky-500 text-slate-950 font-semibold hover:bg-sky-400 transition-all">Let's Talk</a>
-            </nav>
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Navigation Menu">
-                <i class="fa-solid fa-bars text-xl"></i>
-            </button>
+        </nav>
+
+        <button id="menu-btn"
+                class="lg:hidden text-slate-300 hover:text-white p-2"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+    </div>
+
+    <nav id="mobile-menu"
+         class="hidden lg:hidden px-5 pt-3 pb-6 space-y-2 glass-card border-b border-bordercolor"
+         aria-label="Mobile navigation">
+
+        <a href="#problems" class="block py-2 text-slate-300">What I Solve</a>
+        <a href="#services" class="block py-2 text-slate-300">Services</a>
+        <a href="#skills" class="block py-2 text-slate-300">Skills</a>
+        <a href="#projects" class="block py-2 text-slate-300">Case Studies</a>
+        <a href="#ai-demo" class="block py-2 text-slate-300">AI Workflow</a>
+        <a href="#about" class="block py-2 text-slate-300">About</a>
+        <a href="#contact" class="block py-3 text-center rounded-lg bg-sky-500 text-slate-950 font-bold">
+            Let's Talk
+        </a>
+    </nav>
+</header>
+
+<main id="main-content" class="pt-20">
+
+<!-- HERO -->
+<section id="home" class="py-20 lg:py-28 relative overflow-hidden">
+
+    <div class="absolute top-20 right-0 w-96 h-96 bg-sky-500/10 blur-3xl rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+            <div class="lg:col-span-7">
+
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold bg-sky-500/10 text-sky-400 border border-sky-500/20 mb-7">
+                    <i class="fa-solid fa-brain"></i>
+                    AI-POWERED E-COMMERCE & OPERATIONS ANALYTICS
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-7 leading-tight">
+                    Turning operational data into
+                    <span class="gradient-text">profit-saving business decisions.</span>
+                </h1>
+
+                <p class="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed">
+                    I help Shopify and online brands identify where returns,
+                    late deliveries, inventory bottlenecks and stockouts
+                    are costing them money — using data analytics and
+                    AI-assisted insights to recommend practical solutions.
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+
+                    <a href="#projects"
+                       class="px-6 py-3 rounded-xl bg-sky-500 text-slate-950 font-bold hover:bg-sky-400 shadow-lg shadow-sky-500/20">
+                        Explore My Work
+                        <i class="fa-solid fa-arrow-down ml-2"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/mamman-umar-dino-a9917228a"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="px-6 py-3 rounded-xl glass-card text-white font-semibold hover:bg-slate-800 inline-flex items-center gap-2">
+                        <i class="fa-brands fa-linkedin text-sky-400"></i>
+                        Connect on LinkedIn
+                    </a>
+
+                </div>
+
+                <div class="flex flex-wrap gap-5 mt-10 text-sm text-slate-400">
+                    <span><i class="fa-solid fa-check text-sky-400 mr-2"></i>Business-focused analysis</span>
+                    <span><i class="fa-solid fa-check text-sky-400 mr-2"></i>AI-assisted workflows</span>
+                    <span><i class="fa-solid fa-check text-sky-400 mr-2"></i>Actionable recommendations</span>
+                </div>
+
+            </div>
+
+            <div class="lg:col-span-5 flex justify-center">
+
+                <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl overflow-hidden glass-card p-2 border border-bordercolor shadow-2xl shadow-sky-500/10">
+                    <img src="assets/profile.png"
+                         alt="Mamman Umar Dino"
+                         class="w-full h-full object-cover rounded-2xl"
+                         fetchpriority="high">
+                </div>
+
+            </div>
         </div>
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 space-y-3 glass-card border-b border-bordercolor">
-            <a href="#problems" class="block text-slate-300 hover:text-sky-400 py-2">What I Help Solve</a>
-            <a href="#projects" class="block text-slate-300 hover:text-sky-400 py-2">Case Studies</a>
-            <a href="#process" class="block text-slate-300 hover:text-sky-400 py-2">How I Work</a>
-            <a href="#about" class="block text-slate-300 hover:text-sky-400 py-2">About</a>
-            <a href="#contact" class="block text-center px-4 py-2 rounded-lg bg-sky-500 text-slate-950 font-semibold">Let's Talk</a>
+    </div>
+</section>
+
+<!-- BUSINESS PROBLEMS -->
+<section id="problems" class="py-20 border-t border-bordercolor/50 bg-slate-900/40">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <h2 class="section-heading mb-4">Where I Help Businesses Find Answers</h2>
+            <p class="section-subtitle">
+                Understanding the operational problems behind lost revenue,
+                unnecessary costs and inefficient business processes.
+            </p>
         </div>
-    </header>
 
-    <main class="pt-20">
-        <!-- HERO SECTION -->
-        <section class="py-16 lg:py-24 relative overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-7">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/20 mb-6">
-                            <i class="fa-solid fa-chart-line"></i> E-commerce & Operations Analyst
-                        </div>
-                        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
-                            Turning operational data into <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500">clearer business decisions.</span>
-                        </h1>
-                        <p class="text-lg sm:text-xl text-slate-400 mb-8 leading-relaxed">
-                            I help e-commerce and operations teams turn sales, inventory, fulfillment and delivery data into clearer business decisions.
-                        </p>
-                        <div class="flex flex-wrap gap-4">
-                            <a href="#projects" class="px-6 py-3 rounded-xl bg-sky-500 text-slate-950 font-semibold hover:bg-sky-400 transition-all shadow-lg shadow-sky-500/20">
-                                View Case Studies <i class="fa-solid fa-arrow-down ml-2"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/mamman-umar-dino-a9917228a" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl glass-card text-white font-semibold hover:bg-slate-800 transition-all border border-bordercolor inline-flex items-center gap-2">
-                                <i class="fa-brands fa-linkedin text-sky-400"></i> Connect on LinkedIn
-                            </a>
-                        </div>
-                    </div>
-                    <div class="lg:col-span-5 flex justify-center">
-                        <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl overflow-hidden glass-card p-2 border border-bordercolor shadow-2xl shadow-sky-500/10">
-                            <img src="assets/profile.png" alt="Mamman Umar Dino" class="w-full h-full object-cover rounded-2xl">
-                        </div>
-                    </div>
-                </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="glass-card p-6 rounded-2xl">
+                <i class="fa-solid fa-rotate-left text-sky-400 text-2xl mb-4"></i>
+                <h3 class="font-bold text-white mb-3">Returns & Refunds</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Finding products, categories and return reasons
+                    responsible for revenue and margin erosion.
+                </p>
             </div>
-        </section>
 
-        <!-- WHAT I HELP BUSINESSES UNDERSTAND -->
-        <section id="problems" class="py-20 border-t border-bordercolor/50 bg-slate-900/40">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <h2 class="text-3xl font-bold text-white mb-4">What I Help Businesses Understand</h2>
-                    <p class="text-slate-400">Bringing clarity to daily transactions, order flows, and stock levels.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="glass-card p-6 rounded-2xl">
-                        <div class="text-sky-400 text-xl mb-3"><i class="fa-solid fa-chart-pie"></i></div>
-                        <h3 class="text-white font-semibold mb-2">Sales Performance & Revenue Trends</h3>
-                        <p class="text-slate-400 text-sm">Reviewing product category contributions, average order value, and order volumes over time.</p>
-                    </div>
-                    <div class="glass-card p-6 rounded-2xl">
-                        <div class="text-sky-400 text-xl mb-3"><i class="fa-solid fa-boxes-stacked"></i></div>
-                        <h3 class="text-white font-semibold mb-2">Inventory Risk & Replenishment</h3>
-                        <p class="text-slate-400 text-sm">Tracking stock levels, days cover, and lead times to manage reorders effectively.</p>
-                    </div>
-                    <div class="glass-card p-6 rounded-2xl">
-                        <div class="text-sky-400 text-xl mb-3"><i class="fa-solid fa-truck-fast"></i></div>
-                        <h3 class="text-white font-semibold mb-2">Fulfillment Bottlenecks & Late Deliveries</h3>
-                        <p class="text-slate-400 text-sm">Examining order processing speeds and delivery timelines against internal targets.</p>
-                    </div>
-                    <div class="glass-card p-6 rounded-2xl">
-                        <div class="text-sky-400 text-xl mb-3"><i class="fa-solid fa-rotate-left"></i></div>
-                        <h3 class="text-white font-semibold mb-2">Cancellations & Returns</h3>
-                        <p class="text-slate-400 text-sm">Measuring the impact of returned items and canceled orders on net revenue.</p>
-                    </div>
-                </div>
+            <div class="glass-card p-6 rounded-2xl">
+                <i class="fa-solid fa-boxes-stacked text-sky-400 text-2xl mb-4"></i>
+                <h3 class="font-bold text-white mb-3">Inventory Problems</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Identifying stockout risks, excess inventory,
+                    replenishment gaps and tied-up working capital.
+                </p>
             </div>
-        </section>
 
-        <!-- SELECTED CASE STUDIES (ALL 6 PROJECTS) -->
-        <section id="projects" class="py-20 border-t border-bordercolor/50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <h2 class="text-3xl font-bold text-white mb-4">Selected Case Studies</h2>
-                    <p class="text-slate-400">Practical analytics projects focused on sales, inventory, fulfillment, delivery and operational performance.</p>
-                </div>
-
-                <div class="space-y-16">
-
-                    <!-- 1. RoutePulse -->
-                    <div class="glass-card rounded-2xl overflow-hidden border border-bordercolor">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 lg:p-10 items-center">
-                            <div>
-                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20">CASE STUDY</span>
-                                <h3 class="text-2xl font-bold text-white mt-4 mb-2">E-Commerce Delivery Performance Dashboard</h3>
-                                <p class="text-slate-400 text-sm mb-4"><strong class="text-slate-200">Project Name:</strong> RoutePulse</p>
-                                <p class="text-slate-400 text-sm mb-6">Evaluating delivery performance and the gap between current delivery metrics and target goals.</p>
-                                
-                                <div class="space-y-3 text-sm text-slate-300">
-                                    <div><strong class="text-white">Business Problem:</strong> Tracking delivery timelines across orders to see where fulfillment meets or misses delivery targets.</div>
-                                    <div><strong class="text-white">Data Analyzed:</strong> 100,000 orders.</div>
-                                    <div><strong class="text-white">Analysis & Findings:</strong> Measured performance against a 90% on-time delivery goal. Findings showed 74.4% on-time delivery (24,000 late orders out of 100,000), an average delivery time of 5.0 days, and an average customer rating of 4.21.</div>
-                                    <div><strong class="text-white">Decision Support:</strong> Helps teams identify the size of the delivery performance gap and focus attention on service targets.</div>
-                                </div>
-                                <div class="mt-6 flex flex-wrap gap-2 items-center justify-between">
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-bordercolor">SQL/MySQL</span>
-                                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-bordercolor">Power BI</span>
-                                    </div>
-                                    <a href="https://drive.google.com/drive/folders/1pFE4Cp6AdBb1NNaPHWteTycLA0Bk-UAS" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-sky-500/10 text-sky-400 hover:bg-sky-500/20 border border-sky-500/30 text-xs font-semibold transition-all inline-flex items-center gap-2">
-                                        View Full Case Study <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="bg-slate-950/60 p-4 rounded-xl border border-bordercolor flex items-center justify-center">
-                                <img src="assets/routepulse.png" alt="RoutePulse Dashboard" class="dashboard-img rounded-lg w-full h-auto object-cover border border-bordercolor">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2. Apex Retail Group -->
-                    <div class="glass-card rounded-2xl overflow-hidden border border-bordercolor">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 lg:p-10 items-center">
-                            <div>
-                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20">CASE STUDY</span>
-                                <h3 class="text-2xl font-bold text-white mt-4 mb-2">Commercial & Operations Dashboard (Case Study)</h3>
-                                <p class="text-slate-400 text-sm mb-4"><strong class="text-slate-200">Project Name:</strong> Apex Retail Group</p>
-                                <p class="text-slate-400 text-sm mb-6">Reviewing commercial performance, sales distribution, and customer order outcomes.</p>
-                                
-                                <div class="space-y-3 text-sm text-slate-300">
-                                    <div><strong class="text-white">Business Problem:</strong> Tracking overall commercial health, revenue generation across categories, and order friction like cancellations and refunds.</div>
-                                    <div><strong class="text-white">Data Analyzed:</strong> 97,985 records (6,000 orders, 11,020 units sold).</div>
-                                    <div><strong class="text-white">Analysis & Findings:</strong> Achieved $2.04M net revenue with an average order value of $340.41. Electronics generated over $1.1M with the Laptop Pro 15 as the top revenue product. February 2025 reached approximately $89.8K peak revenue before declining. Cancellations were 6.91% and refunds were 3.76% (combined 10.67%). Average rating was 3.94, with 74% rating 4–5 stars.</div>
-                                    <div><strong class="text-white">Decision Support:</strong> Provides visibility into top-performing products and highlights order cancellation and refund rates for commercial review.</div>
-                                </div>
-                                <div class="mt-6 flex flex-wrap gap-2 items-center justify-between">
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-bordercolor">SQL/MySQL</span>
-                                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-bordercolor">Power BI</span>
-                                    </div>
-                                    <a href="https://drive.google.com/drive/folders/1hLqLF-SPFaEon4xD3B0yjC7S9z49fEJO" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-sky-500/10 text-sky-400 hover:bg-sky-500/20 border border-sky-500/30 text-xs font-semibold transition-all inline-flex items-center gap-2">
-                                        View Full Case Study <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="bg-slate-950/60 p-4 rounded-xl border border-bordercolor flex items-center justify-center">
-                                <img src="assets/apex.png" alt="Apex Retail Group Dashboard" class="dashboard-img rounded-lg w-full h-auto object-cover border border-bordercolor">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 3. NOVAOPS / NovaCart -->
-                    <div class="glass-card rounded-2xl overflow-hidden border border-bordercolor">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 lg:p-10 items-center">
-                            <div>
-                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20">CASE STUDY</span>
-                                <h3 class="text-2xl font-bold text-white mt-4 mb-2">Logistics & Fulfillment Performance Dashboard</h3>
-                                <p class="text-slate-400 text-sm mb-4"><strong class="text-slate-200">Project Name:</strong> NovaCart / NOVAOPS</p>
-                                <p class="text-slate-400 text-sm mb-6">Tracing order flow: Order → Processing → Picking & Packing → Dispatch → Delivery.</p>
-                                
-                                <div class="space-y-3 text-sm text-slate-300">
-                                    <div><strong class="text-white">Business Problem:</strong> Identifying where delays occur across warehouse fulfillment and shipping carriers.</div>
-                                    <div><strong class="text-white">Data Analyzed:</strong> 100,000 fulfillment records (20,000 customers, 500 products, 4 warehouses, 6 carriers).</div>
-                                    <div><strong class="text-white">Analysis & Findings:</strong> Tracked order statuses (65,747 on time, 18,267 late, 15,978 in transit). Recorded late-order causes: Carrier Delay (5,687), Warehouse Backlog (4,360), Picking (2,633), Weather (1,637), Address (1,592), Customer Unavailable (1,485), and Packing (873).</div>
-                                    <div><strong class="text-white">Decision Support:</strong> Highlights specific operational bottlenecks in warehouse tasks and carrier handoffs.</div>
-                                </div>
-                                <div class="mt-6 flex flex-wrap gap-2 items-center justify-between">
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-bordercolor">SQL/MySQL</span>
-                                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-bordercolor">Power BI</span>
-                                    </div>
-                                    <a href="https://drive.google.com/drive/folders/1nDaJeuN7OepIN7VLeXv9JXmHhFYQj7Jo" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-sky-500/10 text-sky-400 hover:bg-sky-500/20 border border-sky-500/30 text-xs font-semibold transition-all inline-flex items-center gap-2">
-                                        View Full Case Study <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="bg-slate-950/60 p-4 rounded-xl border border-bordercolor flex items-center justify-center">
-                                <img src="assets/novaops.png" alt="NovaOps Dashboard" class="dashboard-img rounded-lg w-full h-auto object-cover border border-bordercolor">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 4. Inventory Replenishment -->
-                    <div class="glass-card rounded-2xl overflow-hidden border border-bordercolor">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 lg:p-10 items-center">
-                            <div>
-                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20">CASE STUDY</span>
-                                <h3 class="text-2xl font-bold text-white mt-4 mb-2">E-Commerce Inventory Replenishment & Stockout Control System</h3>
-                                <p class="text-slate-400 text-sm mb-6">Inventory-control analysis modeling stock levels and replenishment needs.</p>
-                                
-                                <div class="space-y-3 text-sm text-slate-300">
-                                    <div><strong class="text-white">Business Problem:</strong> Monitoring stock levels across a product catalog to maintain item availability.</div>
-                                    <div><strong class="text-white">Data Analyzed:</strong> 199,946 sales rows covering 1,000 SKUs and 75 suppliers (997 SKUs sold).</div>
-                                    <div><strong class="text-white">Method & Findings:</strong> Used Days Cover and Projected Stock After Lead Time calculations via Power Query. Identified that 26 SKUs were below 10 units.</div>
-                                    <div><strong class="text-white">Decision Support:</strong> Gives inventory managers clearer visibility into items that may require replenishment attention.</div>
-                                </div>
-                                <div class="mt-6 flex flex-wrap gap-2 items-center justify-between">
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-bordercolor">Excel</span>
-                                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-bordercolor">Power Query</span>
-                                    </div>
-                                    <a href="https://drive.google.com/drive/folders/1m_PmNjdWjTiVorBsntcwMJmtE-y2Snri" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-sky-500/10 text-sky-400 hover:bg-sky-500/20 border border-sky-500/30 text-xs font-semibold transition-all inline-flex items-center gap-2">
-                                        View Full Case Study <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="bg-slate-950/60 p-4 rounded-xl border border-bordercolor flex items-center justify-center">
-                                <img src="assets/inventory.png" alt="Inventory Replenishment Dashboard" class="dashboard-img rounded-lg w-full h-auto object-cover border border-bordercolor">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 5. E-Commerce Sales & Returns -->
-                    <div class="glass-card rounded-2xl overflow-hidden border border-bordercolor">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 lg:p-10 items-center">
-                            <div>
-                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20">CASE STUDY</span>
-                                <h3 class="text-2xl font-bold text-white mt-4 mb-2">E-Commerce Sales & Return Analytics</h3>
-                                <p class="text-slate-400 text-sm mb-6">Analyzing gross and net revenue differences resulting from product returns.</p>
-                                
-                                <div class="space-y-3 text-sm text-slate-300">
-                                    <div><strong class="text-white">Business Problem:</strong> Examining how product returns impact total revenue and identifying category return trends.</div>
-                                    <div><strong class="text-white">Data Analyzed:</strong> Sales and return records totaling $91.77K gross revenue and $53.29K net revenue.</div>
-                                    <div><strong class="text-white">Analysis & Findings:</strong> Compared gross and net revenue figures across categories. Found that Books experienced a return issue, while Blenders had an unusual sales result in February.</div>
-                                    <div><strong class="text-white">Decision Support:</strong> Points out specific product categories that require a closer look regarding customer returns.</div>
-                                </div>
-                                <div class="mt-6 flex flex-wrap gap-2 items-center justify-between">
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-bordercolor">Excel</span>
-                                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-bordercolor">Power BI</span>
-                                    </div>
-                                    <a href="https://drive.google.com/drive/folders/1YkmtC0pvVwqlpg-6kj9p8t22FfL3QsOC" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-sky-500/10 text-sky-400 hover:bg-sky-500/20 border border-sky-500/30 text-xs font-semibold transition-all inline-flex items-center gap-2">
-                                        View Full Case Study <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="bg-slate-950/60 p-4 rounded-xl border border-bordercolor flex items-center justify-center">
-                                <img src="assets/returns.png" alt="Sales and Returns Dashboard" class="dashboard-img rounded-lg w-full h-auto object-cover border border-bordercolor">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 6. Manufacturing Telemetry -->
-                    <div class="glass-card rounded-2xl overflow-hidden border border-bordercolor">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 lg:p-10 items-center">
-                            <div>
-                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">CASE STUDY</span>
-                                <h3 class="text-2xl font-bold text-white mt-4 mb-2">Manufacturing Telemetry Downtime Analysis</h3>
-                                <p class="text-slate-400 text-sm mb-4"><strong class="text-slate-200">Context:</strong> Deloitte Australia Virtual Job Simulation — Forage</p>
-                                <p class="text-slate-400 text-sm mb-6">Analyzing equipment sensor logs to identify primary causes of industrial downtime.</p>
-                                
-                                <div class="space-y-3 text-sm text-slate-300">
-                                    <div><strong class="text-white">Business Problem:</strong> Identifying equipment failure patterns and downtime concentration across heavy machinery.</div>
-                                    <div><strong class="text-white">Data Analyzed:</strong> Plant telemetry records and machine sensor logs.</div>
-                                    <div><strong class="text-white">Analysis & Findings:</strong> Recorded 103 unhealthy incidents resulting in 1,030 minutes of downtime. LaserWelder and LaserCutter accounted for approximately 88% of total downtime.</div>
-                                    <div><strong class="text-white">Decision Support:</strong> Demonstrates how sensor data can be structured to highlight machinery requiring maintenance attention.</div>
-                                </div>
-                                <div class="mt-6 flex flex-wrap gap-2 items-center justify-between">
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-bordercolor">Data Analysis</span>
-                                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-bordercolor">Power BI</span>
-                                    </div>
-                                    <a href="https://drive.google.com/drive/folders/1Yzfxhi6MmUT8xpNIFhJ6G2Qle3zWu8a1" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-sky-500/10 text-sky-400 hover:bg-sky-500/20 border border-sky-500/30 text-xs font-semibold transition-all inline-flex items-center gap-2">
-                                        View Full Case Study <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="bg-slate-950/60 p-4 rounded-xl border border-bordercolor flex items-center justify-center">
-                                <img src="assets/telemetry.png" alt="Manufacturing Telemetry Dashboard" class="dashboard-img rounded-lg w-full h-auto object-cover border border-bordercolor">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="glass-card p-6 rounded-2xl">
+                <i class="fa-solid fa-truck-fast text-sky-400 text-2xl mb-4"></i>
+                <h3 class="font-bold text-white mb-3">Delivery Delays</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Identifying slow fulfillment locations,
+                    carrier performance problems and SLA failures.
+                </p>
             </div>
-        </section>
 
-        <!-- HOW I WORK -->
-        <section id="process" class="py-20 border-t border-bordercolor/50 bg-slate-900/40">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <h2 class="text-3xl font-bold text-white mb-4">How I Work</h2>
-                    <p class="text-slate-400">A straightforward, structured approach to turning raw operational data into clarity.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="glass-card p-8 rounded-2xl relative">
-                        <span class="text-4xl font-extrabold text-sky-400/20 absolute top-4 right-6">01</span>
-                        <h3 class="text-xl font-bold text-white mb-3">Clean</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Make messy business data usable.</p>
-                    </div>
-                    <div class="glass-card p-8 rounded-2xl relative">
-                        <span class="text-4xl font-extrabold text-sky-400/20 absolute top-4 right-6">02</span>
-                        <h3 class="text-xl font-bold text-white mb-3">Analyze</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Find trends, bottlenecks, exceptions and operational problems.</p>
-                    </div>
-                    <div class="glass-card p-8 rounded-2xl relative">
-                        <span class="text-4xl font-extrabold text-sky-400/20 absolute top-4 right-6">03</span>
-                        <h3 class="text-xl font-bold text-white mb-3">Explain</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Turn the findings into clear business insights and decisions.</p>
-                    </div>
-                </div>
+            <div class="glass-card p-6 rounded-2xl">
+                <i class="fa-solid fa-chart-line text-sky-400 text-2xl mb-4"></i>
+                <h3 class="font-bold text-white mb-3">Unclear Performance</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Turning fragmented sales and transaction records
+                    into understandable business performance indicators.
+                </p>
             </div>
-        </section>
 
-        <!-- ABOUT SECTION -->
-        <section id="about" class="py-20 border-t border-bordercolor/50">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="glass-card p-8 lg:p-12 rounded-3xl border border-bordercolor">
-                    <h2 class="text-2xl font-bold text-white mb-6">About My Focus</h2>
-                    <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
-                        <p>
-                            I focus on the space between raw business data and operational decisions.
-                        </p>
-                        <p>
-                            My core work centers around <strong class="text-white">e-commerce sales, inventory, replenishment, orders, returns, fulfillment, and delivery performance</strong> using tools like Excel, Power Query, SQL/MySQL, Power BI, and Google Sheets.
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 border-t border-bordercolor/50">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <h2 class="section-heading mb-4">Analytics Services</h2>
+            <p class="section-subtitle">
+                Practical analytics services designed to help online
+                businesses understand performance and make better decisions.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+            <div class="service-card glass-card p-8 rounded-2xl">
+                <i class="fa-solid fa-chart-pie text-sky-400 text-2xl mb-5"></i>
+                <h3 class="text-xl font-bold mb-3">E-commerce Sales Analysis</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Analyze sales performance, revenue drivers, average
+                    order value, product performance and purchasing patterns.
+                </p>
+            </div>
+
+            <div class="service-card glass-card p-8 rounded-2xl">
+                <i class="fa-solid fa-arrow-rotate-left text-sky-400 text-2xl mb-5"></i>
+                <h3 class="text-xl font-bold mb-3">Returns & Refund Analysis</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Identify high-return products, refund patterns,
+                    return reasons and opportunities to reduce preventable losses.
+                </p>
+            </div>
+
+            <div class="service-card glass-card p-8 rounded-2xl">
+                <i class="fa-solid fa-box-open text-sky-400 text-2xl mb-5"></i>
+                <h3 class="text-xl font-bold mb-3">Inventory & Stockout Analysis</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Evaluate stock availability, reorder points, days of cover,
+                    safety stock and inventory replenishment requirements.
+                </p>
+            </div>
+
+            <div class="service-card glass-card p-8 rounded-2xl">
+                <i class="fa-solid fa-truck-ramp-box text-sky-400 text-2xl mb-5"></i>
+                <h3 class="text-xl font-bold mb-3">Delivery & Fulfillment Analytics</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Investigate dispatch delays, delivery timelines,
+                    regional performance and logistics partner SLAs.
+                </p>
+            </div>
+
+            <div class="service-card glass-card p-8 rounded-2xl border-sky-500/30">
+                <i class="fa-solid fa-robot text-sky-400 text-2xl mb-5"></i>
+                <h3 class="text-xl font-bold mb-3">AI-Assisted Business Insights</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Use AI tools to assist with data exploration,
+                    SQL development, qualitative feedback analysis,
+                    pattern interpretation and executive reporting.
+                </p>
+            </div>
+
+            <div class="service-card glass-card p-8 rounded-2xl">
+                <i class="fa-solid fa-display text-sky-400 text-2xl mb-5"></i>
+                <h3 class="text-xl font-bold mb-3">Operational KPI Dashboards</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Build interactive Excel and Power BI reports
+                    that help teams monitor operational performance.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- TECHNICAL SKILLS -->
+<section id="skills" class="py-20 border-t border-bordercolor/50 bg-slate-900/40">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <h2 class="section-heading mb-4">Technical & AI Toolkit</h2>
+            <p class="section-subtitle">
+                Combining reliable data tools with AI-assisted workflows
+                to accelerate analysis and improve business interpretation.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="glass-card p-6 rounded-2xl">
+                <i class="fa-solid fa-database text-sky-400 text-2xl mb-4"></i>
+                <h3 class="font-bold text-lg mb-4">Data Analytics</h3>
+                <ul class="space-y-3 text-sm text-slate-300">
+                    <li>✓ Microsoft Excel</li>
+                    <li>✓ Power Query</li>
+                    <li>✓ SQL / MySQL</li>
+                    <li>✓ Google Sheets</li>
+                </ul>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl">
+                <i class="fa-solid fa-chart-column text-sky-400 text-2xl mb-4"></i>
+                <h3 class="font-bold text-lg mb-4">Business Intelligence</h3>
+                <ul class="space-y-3 text-sm text-slate-300">
+                    <li>✓ Power BI</li>
+                    <li>✓ DAX Calculations</li>
+                    <li>✓ Data Modeling</li>
+                    <li>✓ KPI Dashboards</li>
+                </ul>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl border-sky-500/30">
+                <i class="fa-solid fa-brain text-sky-400 text-2xl mb-4"></i>
+                <h3 class="font-bold text-lg mb-4">AI-Powered Analytics</h3>
+                <ul class="space-y-3 text-sm text-slate-300">
+                    <li>✓ ChatGPT</li>
+                    <li>✓ Claude</li>
+                    <li>✓ Google Gemini</li>
+                    <li>✓ AI-Assisted SQL</li>
+                    <li>✓ AI-Assisted Interpretation</li>
+                </ul>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl">
+                <i class="fa-solid fa-cart-flatbed text-sky-400 text-2xl mb-4"></i>
+                <h3 class="font-bold text-lg mb-4">E-commerce Operations</h3>
+                <ul class="space-y-3 text-sm text-slate-300">
+                    <li>✓ Stockout Risk Analysis</li>
+                    <li>✓ Inventory Replenishment</li>
+                    <li>✓ Returns & Refund Analysis</li>
+                    <li>✓ Delivery Performance</li>
+                    <li>✓ Fulfillment Analytics</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- AI WORKFLOW DEMONSTRATION -->
+<section id="ai-demo" class="py-20 border-t border-bordercolor/50">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-3xl mx-auto mb-14">
+
+            <span class="inline-flex items-center gap-2 px-3 py-2 rounded-full text-xs font-bold bg-sky-500/10 text-sky-400 border border-sky-500/20 mb-5">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                ILLUSTRATIVE WORKFLOW DEMONSTRATION
+            </span>
+
+            <h2 class="section-heading mb-4">
+                From Raw Data to AI-Assisted Business Insights
+            </h2>
+
+            <p class="section-subtitle">
+                AI does not replace accurate calculations.
+                I use SQL and spreadsheet tools to establish the numbers,
+                then AI to assist with interpreting qualitative information
+                and communicating findings.
+            </p>
+
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- STEP 1 -->
+            <div class="glass-card p-7 rounded-2xl">
+
+                <div class="flex justify-between items-center mb-5 pb-4 border-b border-bordercolor">
+                    <span class="text-sm font-bold text-sky-400">
+                        STEP 1 — DATA ANALYSIS
+                    </span>
+                    <span class="text-xs text-slate-400">SQL / MySQL</span>
+                </div>
+
+                <p class="text-sm text-slate-400 mb-4">
+                    Extract products with elevated return rates and rank
+                    them by refund value.
+                </p>
+
+                <pre class="bg-slate-950 p-5 rounded-xl text-xs sm:text-sm text-slate-300 overflow-x-auto border border-bordercolor"><code><span class="text-sky-400">SELECT</span>
+    sku_id,
+    category,
+    return_count,
+    net_refund_val,
+    return_rate
+<span class="text-sky-400">FROM</span> ecommerce_returns
+<span class="text-sky-400">WHERE</span> return_rate > 0.10
+<span class="text-sky-400">ORDER BY</span>
+    net_refund_val <span class="text-sky-400">DESC</span>;</code></pre>
+
+                <div class="space-y-3 mt-5 text-sm">
+
+                    <div class="p-4 bg-slate-900 rounded-lg border border-bordercolor">
+                        <div class="font-bold text-white">SKU-4821 — Leather Boots</div>
+                        <div class="text-rose-400 mt-1">18.4% return rate | $14,200 refund value</div>
+                    </div>
+
+                    <div class="p-4 bg-slate-900 rounded-lg border border-bordercolor">
+                        <div class="font-bold text-white">SKU-9902 — Canvas Jacket</div>
+                        <div class="text-amber-400 mt-1">12.1% return rate | $6,400 refund value</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="glass-card p-7 rounded-2xl border border-sky-500/30">
+
+                <div class="flex justify-between items-center mb-5 pb-4 border-b border-bordercolor">
+                    <span class="text-sm font-bold text-sky-400">
+                        STEP 2 — AI-ASSISTED INTERPRETATION
+                    </span>
+                    <span class="text-xs text-sky-300">LLM Workflow</span>
+                </div>
+
+                <p class="text-sm text-slate-400 mb-5">
+                    Illustrative example: an AI-assisted review of
+                    customer refund comments.
+                </p>
+
+                <div class="p-5 bg-slate-900 rounded-xl border border-bordercolor space-y-4">
+
+                    <div class="text-xs font-bold uppercase tracking-wider text-sky-400">
+                        <i class="fa-solid fa-lightbulb mr-2"></i>
+                        Example synthesis
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-white mb-2">Potential root cause</h4>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            In this illustrative dataset, 78% of reviewed
+                            comments for SKU-4821 mention that the product
+                            runs one size smaller than expected.
                         </p>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- CONTACT SECTION -->
-        <section id="contact" class="py-20 border-t border-bordercolor/50 bg-slate-900/40">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="glass-card p-8 lg:p-12 rounded-3xl border border-bordercolor">
-                    <div class="text-center max-w-xl mx-auto mb-10">
-                        <h2 class="text-3xl font-bold text-white mb-3">Have a sales, inventory, fulfillment or delivery problem? Let's talk.</h2>
-                        <p class="text-slate-400 text-sm">Reach out to discuss your operational challenges and data analysis needs.</p>
-                        <div class="mt-4 flex flex-wrap items-center justify-center gap-6 text-sm">
-                            <span class="text-sky-400 font-medium">
-                                <i class="fa-solid fa-envelope mr-2"></i> mammanumardino@gmail.com
-                            </span>
-                            <a href="https://www.linkedin.com/in/mamman-umar-dino-a9917228a" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 font-medium inline-flex items-center gap-1">
-                                <i class="fa-brands fa-linkedin"></i> Connect on LinkedIn
-                            </a>
+                    <div class="border-t border-bordercolor pt-4">
+                        <h4 class="font-bold text-white mb-2">Suggested action</h4>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Review product sizing information, compare
+                            supplier batch specifications and investigate
+                            whether the issue is contributing to returns.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="mt-5 text-xs text-slate-500">
+                    Note: Demonstration figures and findings are illustrative,
+                    not verified client outcomes.
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="mt-8 glass-card rounded-2xl p-6 text-center">
+            <i class="fa-solid fa-shield-halved text-sky-400 text-2xl mb-3"></i>
+            <h3 class="font-bold text-white mb-2">Human-Reviewed, Data-Driven Decisions</h3>
+            <p class="text-sm text-slate-400 max-w-3xl mx-auto">
+                AI supports the analytical workflow. Calculations,
+                source-data checks and business recommendations remain
+                subject to validation before decisions are made.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="projects" class="py-20 border-t border-bordercolor/50 bg-slate-900/40">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="section-heading mb-4">Selected Analytics Case Studies</h2>
+            <p class="section-subtitle">
+                Practical projects demonstrating how I investigate
+                business performance, identify operational issues
+                and translate findings into recommendations.
+            </p>
+        </div>
+
+        <div class="space-y-12">
+
+            <!-- 1 ROUTEPULSE -->
+            <article class="glass-card rounded-2xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 lg:p-10 items-center">
+
+                    <div>
+                        <span class="text-xs font-bold text-sky-400">FULFILLMENT & DELIVERY</span>
+
+                        <h3 class="text-2xl font-bold text-white mt-3 mb-2">
+                            E-commerce Delivery Performance Dashboard
+                        </h3>
+
+                        <p class="text-sm text-slate-400 mb-5">Project: RoutePulse</p>
+
+                        <div class="space-y-3 text-sm text-slate-300">
+                            <p><strong class="text-white">Business problem:</strong> Limited visibility into delivery performance and fulfillment SLA compliance.</p>
+
+                            <p><strong class="text-white">Data analyzed:</strong> 100,000 transaction and fulfillment records.</p>
+
+                            <p><strong class="text-white">Approach:</strong> SQL aggregation of transit lead times and interactive Power BI reporting.</p>
+
+                            <p><strong class="text-white">Findings:</strong> 74.4% on-time delivery against a 90% target, with 24,000 late orders and an average delivery time of 5.0 days.</p>
+
+                            <p><strong class="text-white">Recommendation:</strong> Review regional carrier SLAs and introduce dispatch alerts for high-risk postal codes.</p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span class="text-xs bg-slate-800 px-3 py-1 rounded">SQL / MySQL</span>
+                            <span class="text-xs bg-slate-800 px-3 py-1 rounded">Power BI</span>
+                        </div>
+
+                        <a href="https://drive.google.com/drive/folders/1pFE4Cp6AdBb1NNaPHWteTycLA0Bk-UAS"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center gap-2 mt-6 text-sm font-bold text-sky-400 hover:text-sky-300">
+                            View Case Study Documentation
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <div class="bg-slate-950/60 p-4 rounded-xl border border-bordercolor">
+                        <img src="assets/routepulse.png"
+                             alt="RoutePulse delivery performance dashboard"
+                             loading="lazy"
+                             class="dashboard-img rounded-lg w-full h-auto border border-bordercolor">
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- 2 APEX -->
+            <article class="glass-card rounded-2xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 lg:p-10 items-center">
+
+                    <div>
+                        <span class="text-xs font-bold text-sky-400">COMMERCIAL & SALES</span>
+
+                        <h3 class="text-2xl font-bold text-white mt-3 mb-2">
+                            Commercial Performance & Order Friction Dashboard
+                        </h3>
+
+                        <p class="text-sm text-slate-400 mb-5">Project: Apex Retail Group</p>
+
+                        <div class="space-y-3 text-sm text-slate-300">
+                            <p><strong class="text-white">Business problem:</strong> Limited visibility into commercial performance, category contributions and order cancellations.</p>
+
+                            <p><strong class="text-white">Data analyzed:</strong> Multi-year sales and customer transaction datasets.</p>
+
+                            <p><strong class="text-white">Approach:</strong> Power BI data modeling, custom DAX calculations and interactive reporting.</p>
+
+                            <p><strong class="text-white">Findings:</strong> Identified leading revenue-generating product lines and recurring cancellation trends during peak campaign hours.</p>
+
+                            <p><strong class="text-white">Recommendation:</strong> Evaluate high-performing product bundles and improve checkout payment gateway fallback processes.</p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span class="text-xs bg-slate-800 px-3 py-1 rounded">Power BI</span>
+                            <span class="text-xs bg-slate-800 px-3 py-1 rounded">DAX</span>
+                            <span class="text-xs bg-slate-800 px-3 py-1 rounded">Excel</span>
                         </div>
                     </div>
 
-                    <!-- Functional Form using Web3Forms with your access key -->
-                    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="space-y-6">
-                        <input type="hidden" name="access_key" value="ab832c8c-9b09-4052-847f-c33720399f6c">
-                        <input type="hidden" name="subject" value="Portfolio Inquiry from Website Visitor">
-                        <input type="hidden" name="from_name" value="Mamman Portfolio Website">
+                    <div class="bg-slate-950/60 p-4 rounded-xl border border-bordercolor">
+                        <img src="assets/apex.png"
+                             alt="Apex Retail Group dashboard"
+                             loading="lazy"
+                             class="dashboard-img rounded-lg w-full h-auto border border-bordercolor">
+                    </div>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your Name</label>
-                                <input type="text" name="name" id="sender-name" required class="w-full bg-slate-950/60 border border-bordercolor rounded-xl px-4 py-3 text-white focus:outline-none focus:border-sky-400 transition-colors text-sm" placeholder="e.g. Sarah Jenkins">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your Email</label>
-                                <input type="email" name="email" id="sender-email" required class="w-full bg-slate-950/60 border border-bordercolor rounded-xl px-4 py-3 text-white focus:outline-none focus:border-sky-400 transition-colors text-sm" placeholder="sarah@company.com">
-                            </div>
+                </div>
+            </article>
+
+            <!-- 3 NOVAOPS -->
+            <article class="glass-card rounded-2xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 lg:p-10 items-center">
+
+                    <div>
+                        <span class="text-xs font-bold text-sky-400">LOGISTICS & OPERATIONS</span>
+
+                        <h3 class="text-2xl font-bold text-white mt-3 mb-2">
+                            Operational Logistics & Fulfillment Analytics
+                        </h3>
+
+                        <p class="text-sm text-slate-400 mb-5">Project: NovaOps</p>
+
+                        <div class="space-y-3 text-sm text-slate-300">
+                            <p><strong class="text-white">Business problem:</strong> High order dispatch latency and uneven warehouse workload distribution.</p>
+
+                            <p><strong class="text-white">Approach:</strong> Dynamic Excel and Power Query models evaluating hub processing speeds and dispatch lead times.</p>
+
+                            <p><strong class="text-white">Findings:</strong> Identified a 36-hour processing delay at regional hub B during mid-week order surges.</p>
+
+                            <p><strong class="text-white">Recommendation:</strong> Evaluate rerouting 25% of regional orders to satellite fulfillment centers and standardizing batch-picking workflows.</p>
                         </div>
+
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span class="text-xs bg-slate-800 px-3 py-1 rounded">Excel</span>
+                            <span class="text-xs bg-slate-800 px-3 py-1 rounded">Power Query</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-950/60 p-4 rounded-xl border border-bordercolor">
+                        <img src="assets/novaops.png"
+                             alt="NovaOps logistics dashboard"
+                             loading="lazy"
+                             class="dashboard-img rounded-lg w-full h-auto border border-bordercolor">
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- 4 MANUFACTURING -->
+            <article class="glass-card rounded-2xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 lg:p-10 items-center">
+
+                    <div>
+                        <span class="text-xs font-bold text-sky-400">TELEMETRY & ASSETS</span>
+
+                        <h3 class="text-2xl font-bold text-white mt-3 mb-2">
+                            Equipment Utilization & Operational Risk Telemetry
+                        </h3>
+
+                        <p class="text-sm text-slate-400 mb-5">Project: Manufacturing Telemetry</p>
+
+                        <div class="space-y-3 text-sm text-slate-300">
+                            <p><strong class="text-white">Business problem:</strong> Unscheduled equipment downtime affecting production output.</p>
+
+                            <p><strong class="text-white">Approach:</strong> Analyzed time-series telemetry sensor logs in Power BI to monitor operational status and failure metrics.</p>
+
+                            <p><strong class="text-white">Findings:</strong> Highlighted temperature spike thresholds occurring prior to 82% of line stoppages.</p>
+
+                            <p><strong class="text-white">Recommendation:</strong> Shift from reactive repairs to sensor-triggered preventative maintenance schedules.</p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span class="text-xs bg-slate-800 px-3 py-1 rounded">Power BI</span>
+                            <span class="text-xs bg-slate-800 px-3 py-1 rounded">SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-950/60 p-4 rounded-xl border border-bordercolor">
+                        <img src="assets/telemetry.png"
+                             alt="Manufacturing telemetry dashboard"
+                             loading="lazy"
+                             class="dashboard-img rounded-lg w-full h-auto border border-bordercolor">
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- 5 RETURNS -->
+            <article class="glass-card rounded-2xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 lg:p-10 items-center">
+
+                    <div>
+                        <span class="text-xs font-bold text-sky-400">RETURNS & REFUNDS</span>
+
+                        <h3 class="text-2xl font-bold text-white mt-3 mb-2">
+                            Multi-Channel Sales, Returns & Refund Impact Model
+                        </h3>
+
+                        <p class="text-sm text-slate-400 mb-5">Project: Sales & Return Analytics</p>
+
+                        <div class="space-y-3 text-sm text-slate-300">
+                            <p><strong class="text-white">Business problem:</strong> Understanding gross versus net revenue erosion caused by product returns across store categories.</p>
+
+                            <p><strong class="text-white">Approach:</strong> SQL aggregations and Excel pivot models linking return reasons to SKU performance.</p>
+
+                            <p><strong class="text-white">Findings:</strong> Specific footwear lines registered a 22% return rate, reducing net margin by 14%.</p>
+
+                            <p><strong class="text-white">Recommendation:</strong> Review product sizing guides and revise packaging protection for fragile items.</p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span class="text-xs bg-slate-800 px-3 py-1 rounded">SQL</span>
+                            <span class="text-xs bg-slate-800 px-3 py-1 rounded">Excel</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-950/60 p-4 rounded-xl border border-bordercolor">
+                        <img src="assets/sales_returns.png"
+                             alt="Sales and returns analytics dashboard"
+                             loading="lazy"
+                             class="dashboard-img rounded-lg w-full h-auto border border-bordercolor">
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- 6 INVENTORY -->
+            <article class="glass-card rounded-2xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 lg:p-10 items-center">
+
+                    <div>
+                        <span class="text-xs font-bold text-sky-400">INVENTORY CONTROL</span>
+
+                        <h3 class="text-2xl font-bold text-white mt-3 mb-2">
+                            Inventory Stockout Risk & Reorder Replenishment Model
+                        </h3>
+
+                        <p class="text-sm text-slate-400 mb-5">Project: Inventory Replenishment Model</p>
+
+                        <div class="space-y-3 text-sm text-slate-300">
+                            <p><strong class="text-white">Business problem:</strong> Frequent stockouts on hero products alongside capital tied up in slow-moving inventory.</p>
+
+                            <p><strong class="text-white">Approach:</strong> Designed dynamic reorder point models calculating days of cover and safety stock thresholds.</p>
+
+                            <p><strong class="text-white">Findings:</strong> Identified five top revenue-generating SKUs at immediate stockout risk within 10 days due to supplier lead-time gaps.</p>
+
+                            <p><strong class="text-white">Recommendation:</strong> Implement reorder triggers in Excel and review safety stock baselines.</p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span class="text-xs bg-slate-800 px-3 py-1 rounded">Excel</span>
+                            <span class="text-xs bg-slate-800 px-3 py-1 rounded">Power Query</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-950/60 p-4 rounded-xl border border-bordercolor">
+                        <img src="assets/inventory.png"
+                             alt="Inventory replenishment and stockout model"
+                             loading="lazy"
+                             class="dashboard-img rounded-lg w-full h-auto border border-bordercolor">
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 border-t border-bordercolor/50">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+            <div class="lg:col-span-7">
+
+                <span class="text-xs font-bold text-sky-400 mb-5 inline-block">
+                    ABOUT MY APPROACH
+                </span>
+
+                <h2 class="section-heading mb-7">
+                    Reliable Analytics. Smarter Workflows. Practical Decisions.
+                </h2>
+
+                <div class="space-y-5 text-slate-300 leading-relaxed">
+
+                    <p>
+                        I am Mamman Umar Dino, an E-commerce and Operations
+                        Analyst focused on helping online businesses understand
+                        the problems hidden within their sales, inventory,
+                        returns and fulfillment data.
+                    </p>
+
+                    <p>
+                        My analytical approach combines established data tools
+                        such as Excel, SQL and Power BI with AI tools including
+                        ChatGPT, Claude and Google Gemini.
+                    </p>
+
+                    <p>
+                        I use AI as an analytical assistant for exploration,
+                        query development, qualitative feedback interpretation
+                        and reporting — while validating calculations and
+                        findings against the underlying data.
+                    </p>
+
+                    <p>
+                        My objective is simple: help business owners move
+                        beyond reporting numbers and understand what those
+                        numbers mean for their operations and profitability.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="lg:col-span-5">
+
+                <div class="glass-card p-8 rounded-2xl space-y-7">
+
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-bullseye text-sky-400 text-xl mt-1"></i>
                         <div>
-                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Describe Your Challenge</label>
-                            <textarea name="message" id="sender-message" rows="4" required class="w-full bg-slate-950/60 border border-bordercolor rounded-xl px-4 py-3 text-white focus:outline-none focus:border-sky-400 transition-colors text-sm" placeholder="Tell me about your sales, inventory, or fulfillment operational challenge..."></textarea>
+                            <h3 class="font-bold text-white mb-2">Business Outcomes</h3>
+                            <p class="text-sm text-slate-400">
+                                Focus on returns, stockouts, delivery performance
+                                and operational efficiency.
+                            </p>
                         </div>
-                        <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-sky-500 text-slate-950 font-bold hover:bg-sky-400 transition-all shadow-lg shadow-sky-500/20 text-sm tracking-wide">
-                            Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
-                        </button>
-                        <div id="form-result" class="text-center text-sm font-medium mt-3 hidden"></div>
-                    </form>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-brain text-sky-400 text-xl mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-white mb-2">AI-Assisted Analysis</h3>
+                            <p class="text-sm text-slate-400">
+                                Faster exploration and interpretation,
+                                supported by reliable data calculations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-lightbulb text-sky-400 text-xl mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-white mb-2">Actionable Insights</h3>
+                            <p class="text-sm text-slate-400">
+                                Clear explanations and practical recommendations
+                                that business teams can evaluate and implement.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-        </section>
-    </main>
 
-    <!-- FOOTER -->
-    <footer class="py-10 border-t border-bordercolor text-center text-xs text-slate-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>&copy; 2026 Mamman Umar Dino. All rights reserved.</p>
-            <div class="flex items-center gap-6">
-                <a href="mailto:mammanumardino@gmail.com" class="hover:text-sky-400 transition-colors"><i class="fa-solid fa-envelope"></i> mammanumardino@gmail.com</a>
-                <a href="https://www.linkedin.com/in/mamman-umar-dino-a9917228a" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
             </div>
+
         </div>
-    </footer>
+    </div>
+</section>
 
-    <!-- JAVASCRIPT FOR MOBILE MENU & AJAX FORM SUBMISSION -->
-    <script>
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+<!-- CONTACT -->
+<section id="contact" class="py-20 border-t border-bordercolor/50 bg-slate-900/40">
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="glass-card rounded-3xl p-8 sm:p-14 border border-sky-500/20 text-center max-w-4xl mx-auto">
+
+            <span class="text-xs font-bold text-sky-400 mb-5 inline-block">
+                LET'S WORK TOGETHER
+            </span>
+
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
+                Are operational problems quietly costing your business money?
+            </h2>
+
+            <p class="text-slate-300 text-lg mb-9 max-w-2xl mx-auto leading-relaxed">
+                Let's examine your sales, returns, inventory or fulfillment
+                data and identify where your business can improve.
+            </p>
+
+            <p class="text-sky-300 font-semibold mb-8">
+                Have a sample Excel or CSV dataset? Let's start with a conversation.
+            </p>
+
+            <div class="flex flex-wrap gap-4 justify-center">
+
+                <a href="https://www.linkedin.com/in/mamman-umar-dino-a9917228a"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="px-8 py-4 rounded-xl bg-sky-500 text-slate-950 font-bold hover:bg-sky-400 inline-flex items-center gap-2">
+                    <i class="fa-brands fa-linkedin text-xl"></i>
+                    Message Me on LinkedIn
+                </a>
+
+                <a href="mailto:mammanumardino@gmail.com"
+                   class="px-8 py-4 rounded-xl glass-card text-white font-bold hover:bg-slate-800 border border-bordercolor inline-flex items-center gap-2">
+                    <i class="fa-solid fa-envelope text-sky-400 text-xl"></i>
+                    Send an Email
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="py-8 border-t border-bordercolor text-center text-slate-500 text-sm">
+
+    <div class="max-w-7xl mx-auto px-4">
+
+        <p class="text-white font-semibold mb-2">Mamman Umar Dino</p>
+
+        <p>
+            AI-Powered E-commerce & Operations Analytics
+        </p>
+
+        <p class="mt-4">
+            © <span id="current-year">2026</span> Mamman Umar Dino.
+            All rights reserved.
+        </p>
+
+        <a href="#home" class="inline-block mt-4 text-sky-400 hover:text-sky-300">
+            Back to top ↑
+        </a>
+
+    </div>
+
+</footer>
+
+<!-- MOBILE NAVIGATION SCRIPT -->
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+
+        mobileMenu.classList.toggle('hidden');
+
+        menuBtn.setAttribute('aria-expanded', String(!isOpen));
+
+        menuBtn.setAttribute(
+            'aria-label',
+            isOpen ? 'Open navigation menu' : 'Close navigation menu'
+        );
+
+        menuBtn.innerHTML = isOpen
+            ? '<i class="fa-solid fa-bars text-xl"></i>'
+            : '<i class="fa-solid fa-xmark text-xl"></i>';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.setAttribute('aria-label', 'Open navigation menu');
+            menuBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
         });
+    });
 
-        // AJAX Contact Form Handler
-        const form = document.getElementById('contact-form');
-        const result = document.getElementById('form-result');
-        const submitBtn = document.getElementById('submit-btn');
+    document.getElementById('current-year').textContent =
+        new Date().getFullYear();
+</script>
 
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const formData = new FormData(form);
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
-
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = "Sending message... <i class='fa-solid fa-spinner fa-spin ml-2'></i>";
-            result.style.display = "block";
-            result.className = "text-center text-sm font-medium mt-3 text-slate-400";
-            result.innerHTML = "Please wait...";
-
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {
-                let jsonResponse = await response.json();
-                if (response.status == 200) {
-                    result.className = "text-center text-sm font-medium mt-3 text-emerald-400";
-                    result.innerHTML = "Message sent successfully! I will get back to you soon.";
-                    form.reset();
-                } else {
-                    result.className = "text-center text-sm font-medium mt-3 text-rose-400";
-                    result.innerHTML = jsonResponse.message || "Something went wrong! Please try again later.";
-                }
-            })
-            .catch(error => {
-                console.log(error);
-                result.className = "text-center text-sm font-medium mt-3 text-rose-400";
-                result.innerHTML = "Network error! Please check your connection and try again.";
-            })
-            .finally(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane ml-2"></i>';
-                setTimeout(() => {
-                    result.style.display = 'none';
-                }, 6000);
-            });
-        });
-    </script>
 </body>
 </html>
